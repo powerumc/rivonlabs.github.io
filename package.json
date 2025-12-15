@@ -1,16 +1,14 @@
 {
-  "name": "ribonlabs-site",
+  "name": "rivonlabs-site",
   "private": true,
   "version": "0.1.0",
   "description": "Ribon Labs company website",
+  "type": "module",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
-    "build": "rm -rf build && mkdir -p build && cp -R index.html assets build/ && printf 'www.rivonlabs.com' > build/CNAME",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "node scripts/serve.mjs",
+    "deploy": "gh-pages -d public -b gh-pages"
   },
-  "dependencies": {
+  "devDependencies": {
     "gh-pages": "^6.3.0"
   }
 }
